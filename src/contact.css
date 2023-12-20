@@ -1,0 +1,112 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background image and text color */
+body {
+    background-image: url('data:image/jpeg;base64,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'); /* Replace with the path to your logo image */
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center center;
+    color: #fff; /* White text color */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header section */
+header {
+   /* background-color: blue; /* Semi-transparent black background for header */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White link color */
+}
+
+/* Style the main content */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style the form */
+form label {
+    /*display: block;*/
+    margin-bottom: 10px;
+    background-color: colorless;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="massage"],
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #2980b9; /* Dark blue button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    background-color: blue; /* Semi-transparent black footer */
+    padding: 10px;
+}
+
+/* Responsive design - adjust styles for smaller screens as needed */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+    nav ul {
+        padding: 5px;
+    }
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+.footer {
+    background-color: #0073e6; /* Blue color */
+    color: #fff; /* Text color */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}

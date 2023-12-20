@@ -1,0 +1,110 @@
+/* CSS for Bold and Imposing Title */
+
+h1 {
+    font-size: 36px; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase the title text */
+    color: #0074e4; /* Blue color for the title */
+    text-align: center; /* Center the title text */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+
+
+
+
+/* CSS for the Registration Form with a Blue Theme */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:white ;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #0074e4; /* Blue color for headings */
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0074e4; /* Blue color for labels */
+}
+
+/* CSS for Logo Container */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #0074e4; /* Background color for the entire screen */
+}
+
+/* CSS for Logo Image */
+img {
+    max-width: 100%; /* Ensure the logo doesn't exceed the screen width */
+    max-height: 100%; /* Ensure the logo doesn't exceed the screen height */
+    width: auto;
+    height: auto;
+}
+
+/* Additional styles for the logo (if needed) */
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0074e4; /* Blue color for input borders */
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+a {
+    color: #0074e4; /* Blue color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #0074e4; /* Blue color for buttons */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0059b3; /* Darker blue on hover */
+}
