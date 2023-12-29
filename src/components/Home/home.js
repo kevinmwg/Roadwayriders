@@ -16,7 +16,13 @@ function Home() {
     }
 
     return (
-
+<div>
+                    <Helmet>
+                        
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2262976391939787"
+     crossorigin="anonymous"></script>
+                    </Helmet>
+                </div>
 
         <div>
 
@@ -24,10 +30,7 @@ function Home() {
                 <div className="brand">
                     <a href="#">RoadwayRiders Hub</a>
 
-                    <Helmet>
-                        <meta name="google-adsense-account" content="ca-pub-2262976391939787">  
-        
-                   </Helmet>
+                    
         
                     <div className = "slogan">
                         <a href="#">Navigating , paving the way</a>
