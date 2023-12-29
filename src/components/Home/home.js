@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './home.css';
 import {getAuth} from "firebase/auth";
 import resized from "../../images/3 - Copy.png";
+import {Helmet} from 'react-helmet';
 
 function Home() {
 
@@ -23,6 +24,11 @@ function Home() {
                 <div className="brand">
                     <a href="#">RoadwayRiders Hub</a>
 
+                    <Helmet>
+                        <meta name="google-adsense-account" content="ca-pub-2262976391939787">  
+        
+                   </Helmet>
+        
                     <div className = "slogan">
                         <a href="#">Navigating , paving the way</a>
 
