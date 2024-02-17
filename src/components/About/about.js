@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css'; // Import your CSS for styling the About page
 
 const AboutPage = () => {

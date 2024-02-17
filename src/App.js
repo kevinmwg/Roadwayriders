@@ -2,8 +2,7 @@ import './App.css';
 import Home from "./components/Home/home";
 import {
     BrowserRouter as Router,
-    Routes,
-    Link,Navlink , Route
+    Routes, Route
 } from "react-router-dom";
 import Login from "./components/Login/login";
 import Registration from "./components/Registration/registration";

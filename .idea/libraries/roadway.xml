@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="roadway">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/roadway.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

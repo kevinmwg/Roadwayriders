@@ -44,7 +44,7 @@ const Donate = () => {
             }
 
         } catch (e) {
-            console.log(e);
+            console.log(e, name);
 
         }
 

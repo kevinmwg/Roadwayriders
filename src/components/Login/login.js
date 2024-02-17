@@ -1,7 +1,7 @@
 import React from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // createUserWithEmailAndPassword,
 import './login.css'
-import app from "../../auth";
+// import app from "../../auth";
 import {useNavigate} from "react-router-dom";
 
 const Login = () => {
@@ -15,24 +15,24 @@ const Login = () => {
         const auth = getAuth();
 
         // if email is not in use
-        const register = () => {
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
-                    console.log(user);
-                    setEmail("");
-                    setPassword("");
-                    navigate("/");
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    console.log(errorCode, errorMessage);
-                    setError(errorMessage);
-                    // ..
-                })
-        }
+        // const register = () => {
+        //     createUserWithEmailAndPassword(auth, email, password)
+        //         .then((userCredential) => {
+        //             // Signed in
+        //             const user = userCredential.user;
+        //             console.log(user);
+        //             setEmail("");
+        //             setPassword("");
+        //             navigate("/");
+        //         })
+        //         .catch((error) => {
+        //             const errorCode = error.code;
+        //             const errorMessage = error.message;
+        //             console.log(errorCode, errorMessage);
+        //             setError(errorMessage);
+        //             // ..
+        //         })
+        // }
     //     signinwithemailandpassword
 
         const login = () => {

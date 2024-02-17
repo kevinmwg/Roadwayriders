@@ -1,6 +1,6 @@
 import React from 'react';
 import './registration.css';
-import {createUserWithEmailAndPassword, getAuth} from "firebase/auth";
+// import { createUserWithEmailAndPassword, getAuth} from "firebase/auth";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 import {useNavigate,Link} from "react-router-dom";
 const Registration = () => {
@@ -14,37 +14,71 @@ const Registration = () => {
     const [locality, setLocality] = React.useState("");
     const [termsCheckbox, setTermsCheckbox] = React.useState("");
     const [privacyCheckbox, setPrivacyCheckbox] = React.useState("");
-    const [error, setError] = React.useState("");
-    const [email, setEmail] = React.useState("");
-    const [password, setPassword] = React.useState("");
+    // const [error, setError] = React.useState("");
+    // const [email, setEmail] = React.useState("");
+    // const [password, setPassword] = React.useState("");
 
     // create user with email and password and add the rest to firestore operators
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const auth = getAuth();
+        // const auth = getAuth();
 
             const db = getFirestore();
-            createUserWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
-                    console.log(user);
-                    setEmail("");
-                    setPassword("");
-                    navigate("/");
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    console.log(errorCode, errorMessage);
-                    setError(errorMessage);
-                    // ..
-                })
+            // createUserWithEmailAndPassword(auth, email, password)
+            //     .then((userCredential) => {
+            //         // Signed in
+            //         const user = userCredential.user;
+            //         console.log(user);
+            //         setEmail("");
+            //         setPassword("");
+            //         navigate("/");
+            //     })
+            //     .catch((error) => {
+            //         const errorCode = error.code;
+            //         const errorMessage = error.message;
+            //         console.log(errorCode, errorMessage);
+            //         setError(errorMessage);
+            //         // ..
+            //     })
 
+
+        try {
+            // validate phone number and must only contain numbers
+            if (phone.length !== 12 || !phone.startsWith("254")) {
+                alert("Invalid phone number, must be in international format e.g 254700000000");
+                return;
+            }
+
+            const response = await fetch("https://msl-fcen.onrender.com/pay", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    amount: "100",
+                    phone
+                })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+                alert("Thank you for registering as an operator");
+                setPhone("");
+
+
+            } else {
+                console.log("Something went wrong, please try again later");
+            }
+
+        } catch (e) {
+            console.log(e, termsCheckbox, privacyCheckbox);
+
+        }
 
             await addDoc(collection(db, "operators"), {
-                email: email,
+                // email: email,
                 regNumber: regNumber,
                 phone: phone,
                 vehicleType: vehicleType,
@@ -67,9 +101,9 @@ const Registration = () => {
             setServiceOffered("");
             setVehicleType("");
             setPhone("");
-            setEmail("");
-            setPassword("");
-            navigate("/login");
+            // setEmail("");
+            // setPassword("");
+            navigate("/landing");
 
     }
 
@@ -78,13 +112,13 @@ const Registration = () => {
         <div>
             <h1>Operator Registration</h1>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email"     onChange={(e) => setEmail(e.target.value)}
-                       required/><br/><br/>
+                {/*<label htmlFor="email">Email:</label>*/}
+                {/*<input type="email" id="email" name="email"     onChange={(e) => setEmail(e.target.value)}*/}
+                {/*       required/><br/><br/>*/}
 
-                <label htmlFor="password">Password:</label>
-                <input type="password" id="password" onChange={(e) => setPassword(e.target.value)}
-                       name="password" required/><br/><br/>
+                {/*<label htmlFor="password">Password:</label>*/}
+                {/*<input type="password" id="password" onChange={(e) => setPassword(e.target.value)}*/}
+                {/*       name="password" required/><br/><br/>*/}
 
                 <label htmlFor="regNumber">Vehicle Registration Number:</label>
                 <input type="text" id="regNumber" onChange={(e) => setRegNumber(e.target.value)}

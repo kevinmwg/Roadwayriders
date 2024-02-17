@@ -36,7 +36,7 @@ const Contact = () => {
 
             }
         ).catch((error) => {
-            console.log(error.text);
+            console.log(error.text, email, name, message);
         });
     }
 

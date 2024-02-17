@@ -1,213 +1,132 @@
-/* Reset default margin and padding */
-body, h1, h2, p {
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
 
-    overflow-x: hidden;
-    
+/* Basic styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
 }
 
-
+/* Navbar styles */
 .navbar {
-    background-color: #0074e4;
-    overflow: hidden;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    /*text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.587); /* Add a subtle shadow */
-
-
 }
 
 .brand a {
-    font-size: 24px;
-    color: white;
     text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.slogan a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+    display: none; /* Hide initially on larger screens */
 }
 
 .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
-    margin: 3px 0;
-    transition: 0.4s;
+    background-color: #fff;
+    margin: 6px 0;
 }
 
 .nav-links {
     display: flex;
-    align-items: center;
+    gap: 20px;
 }
 
-.nav-links a {
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-/* CSS for styling the video container */
-
-
-/* CSS for mobile message animation */
-/* CSS for alternating mobile message animation */
-.message-container {
-    position: relative;
+/* Hero image styles */
+.hero-image {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    max-height: 400px; /* Set a reasonable maximum height for the hero image */
+    object-fit: cover;
 }
 
-.mobile-message {
-    position: absolute;
-    top: 50%;
-    transform: translateX(-100%);
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    max-width: 70%;
-    border-radius: 20px;
-    opacity: 0;
-    animation: alternate-pop-up 5s ease-in-out forwards;
-    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show on smaller screens */
+        cursor: pointer;
+    }
 
-}
+    .nav-links {
+        display: none; /* Hide initially on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+    }
 
-@keyframes alternate-pop-up {
-    0%, 100% {
-        transform: translateX(-100%);
-        opacity: 0;
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px;
     }
-    10% {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-    90% {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(100%);
-        opacity: 0;
+
+    .nav-links.active {
+        display: flex;
     }
 }
 
-/* Delay each message for intervals */
-.mobile-message:nth-child(1) {
-    animation-delay: 1s;
-}
-
-.mobile-message:nth-child(2) {
-    animation-delay: 10s; /* Adjust the delay as needed for intervals */
-}
-
-.mobile-message:nth-child(3) {
-    animation-delay: 15s; /* Adjust the delay as needed for intervals */
-}
-.mobile-message:nth-child(4) {
-    animation-delay: 20s; /* Adjust the delay as needed for intervals */
-
-}
-.mobile-message:nth-child(5) {
-    animation-delay: 25s; /* Adjust the delay as needed for intervals */
-
-}
-.mobile-message:nth-child(6) {
-    animation-delay: 30s; /* Adjust the delay as needed for intervals */
-
-}
-.mobile-message:nth-child(7) {
-    animation-delay: 35s; /* Adjust the delay as needed for intervals */
-
-}
-.mobile-message:nth-child(8) {
-    animation-delay: 40s; /* Adjust the delay as needed for intervals */
-}
-.mobile-message:nth-child(9) {
-    animation-delay: 45s; /* Adjust the delay as needed for intervals */
-
-}
-.mobile-message:nth-child(10) {
-    animation-delay: 50s; /* Adjust the delay as needed for intervals */
-
-}
-.mobile-message:nth-child(11) {
-    animation-delay: 55s; /* Adjust the delay as needed for intervals */
-
-}
-.mobile-message:nth-child(12) {
-    animation-delay: 60s; /* Adjust the delay as needed for intervals */
-}
-
-
-/* CSS for styling the slogan */
-.slogan {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Replace 'Your-Stylish-Font' with the desired font */
-    font-size: 24px; /* Adjust font size as needed */
-    color:#0074e4 ; /* Font color */
-    text-transform: lowercase; /* Uppercase text */
-    letter-spacing: 2px; /* Adjust letter spacing as needed */
-    margin-top: 10px; /* Adjust spacing from the elements above */
-    text-align: center; /* Center the text horizontally */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-}
-
-/* Example for a hover effect */
-.slogan:hover {
-    color: #ff6f61; /* Change color on hover */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Enhance the shadow on hover */
-}
-
-
-
-/* CSS for Logo Container */
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.logo-container {
+.operators {
+    margin-top: 5rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
     display: flex;
-    align-items:left;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    height: 100%;
-   /* background-color: #0074e4; /* Background color for the entire screen */
-    
 }
 
-/* CSS for Logo Image */
-img {
-    max-width: 120%; /* Ensure the logo doesn't exceed the screen width */
-    max-height: 80%; /* Ensure the logo doesn't exceed the screen height */
-    width: auto;
-    height: auto;
-    background-color:  #3498db;
+.operator {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px; /* Adjust the width based on your design preference */
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    & h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    & p {
+        margin-bottom: 8px;
+    }
 }
 
-/* Additional styles for the logo (if needed) */
 
-
-
-
-.video-container {
-    max-width: 90%;
-    text-align: right;
-    margin: 5px auto;
+.search-bar {
+    margin-top: 20px;
+    padding: 10px;
 }
-body {
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
