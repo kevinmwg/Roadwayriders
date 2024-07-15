@@ -19,7 +19,7 @@ const Donate = () => {
                 return;
             }
 
-            const response = await fetch("https://stk-push-server-8.onrender.com", {
+            const response = await fetch("https://stk-push-server-1.onrender.com", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
