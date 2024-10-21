@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
     <div>
       <div className="privacy-policy-container">
         <h1>Privacy Policy</h1>
-        <p><strong>Effective Date: October 2024</strong></p>
+        <p><strong>Effective Date:21st October 2024</strong></p>
         <p>
           Glalin Technologies (“we,” “our,” “us”) respects your privacy and is committed to protecting your personal data.
           This Privacy Policy applies to the MCK Komarock Academy mobile application (“App”), developed by Glalin Technologies, based in Nairobi, Kenya.
