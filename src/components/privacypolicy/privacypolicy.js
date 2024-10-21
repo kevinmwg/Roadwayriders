@@ -5,10 +5,6 @@ import './privacypolicy.css'; // Import your CSS file
 const PrivacyPolicy = () => {
   return (
     <div>
-      <div className="logo-container">
-        <img src={png1} alt="MCK Komarock Academy Logo" />
-      </div>
-
       <div className="privacy-policy-container">
         <h1>Privacy Policy</h1>
         <p><strong>Effective Date: October 2024</strong></p>
