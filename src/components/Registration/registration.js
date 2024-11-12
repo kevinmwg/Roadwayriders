@@ -185,6 +185,10 @@ const Registration = () => {
                         onChange={(e) => setPrivacyCheckbox(e.target.value)}
                                         />
                         <label for="privacyCheckbox">I accept the <Link to="/privacypolicy">Privacy Policy</Link></label>
+                        onChange={(e) => setPrivacyCheckbox(e.target.value)}
+                                                    
+                        <label for="privacyCheckbox">I accept the <Link to="/privacypolicy2">Privacy Policy 2</Link></label>
+                        onChange={(e) => setPrivacyCheckbox(e.target.value)}
 
 
                        <button type="submit">Register</button>

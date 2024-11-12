@@ -13,6 +13,7 @@ import Listings from "./components/Listings/Listings";
 import About from "./components/About/about";
 import Termsandcondition from "./components/terms and condition/termsandconditon";
 import PrivacyPolicy from './components/privacypolicy/privacypolicy';
+import PrivacyPolicy from './components/privacypolicy/privacypolicy2';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 <Route path='/about' element={<About/>}/>
                 <Route path='/termsandcondition' element={<Termsandcondition/>}/>
                 <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+                <Route path='/privacypolicy2' element={<PrivacyPolicy2/>}/>
             </Routes>
         </Router>
     </div>
