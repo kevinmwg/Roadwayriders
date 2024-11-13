@@ -13,30 +13,29 @@ import Listings from "./components/Listings/Listings";
 import About from "./components/About/about";
 import Termsandcondition from "./components/terms and condition/termsandconditon";
 import PrivacyPolicy from './components/privacypolicy/privacypolicy';
-import PrivacyPolicy from './components/privacypolicy/privacypolicy2';
-
+import PrivacyPolicy2 from './components/privacypolicy/privacypolicy2'; // Renamed import
 
 function App() {
   return (
     <div className="App">
-      {/*<Home />*/}
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path='/landing' element={<Landing />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Registration />} />
-                <Route path='/contact' element={<Contact />} />
-                <Route path='/donate' element={<Donate />} />
-                <Route path='/listings'element={<Listings/>}/>
-                <Route path='/about' element={<About/>}/>
-                <Route path='/termsandcondition' element={<Termsandcondition/>}/>
-                <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
-                <Route path='/privacypolicy2' element={<PrivacyPolicy2/>}/>
-            </Routes>
-        </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/listings" element={<Listings />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/termsandcondition" element={<Termsandcondition />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/privacypolicy2" element={<PrivacyPolicy2 />} /> {/* Corrected route */}
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
